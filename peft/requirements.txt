@@ -1,0 +1,7 @@
+transformers==4.39.3
+datasets
+peft
+accelerate
+fastapi
+uvicorn
+torch
