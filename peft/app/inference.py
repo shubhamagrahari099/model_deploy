@@ -4,7 +4,10 @@ import torch
 print('###########################################dd')
 # "C:\Users\Shubham Agrahari\Desktop\LORA\app"
 # MODEL_PATH = "C:/Users/Shubham Agrahari/Desktop/peft/app/model/saved_model"
-MODEL_PATH = "/app/model/saved_model"
+# MODEL_PATH = "/app/model/saved_model"
+import os
+MODEL_PATH = os.getenv("MODEL_PATH", "/app/model/saved_model")  # fallback to old path
+
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_PATH)
 print('s')
